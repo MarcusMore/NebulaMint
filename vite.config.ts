@@ -16,7 +16,6 @@ export default defineConfig({
           // Separate vendor chunks for better code splitting
           'react-vendor': ['react', 'react-dom'],
           'ethers-vendor': ['ethers'],
-          'nft-storage-vendor': ['nft.storage'],
           'lucide-vendor': ['lucide-react'],
         },
       },
