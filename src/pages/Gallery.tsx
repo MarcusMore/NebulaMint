@@ -5,7 +5,8 @@ import {
   RefreshCw,
   Loader2,
   Image as ImageIcon,
-  Grid3x3
+  Grid3x3,
+  Wallet
 } from 'lucide-react';
 import { getRecentMints, MintEvent } from '../services/nftContract';
 import { getIPFSGatewayURL, fetchFromIPFS } from '../services/ipfsStorage';
