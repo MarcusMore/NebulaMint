@@ -1,0 +1,5 @@
+{
+  "name": "Nebula Mint - AI NFT Creator",
+  "description": "A decentralized application to generate AI art using Gemini 2.5 and mint it as NFTs, or upload your own creations.",
+  "requestFramePermissions": []
+}
