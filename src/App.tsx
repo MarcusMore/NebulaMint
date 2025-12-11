@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Mint from './pages/Mint';
 import Metrics from './pages/Metrics';
 import Gallery from './pages/Gallery';
@@ -94,7 +95,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-dark-900 text-white font-sans selection:bg-brand-500 selection:text-white">
+    <div className="min-h-screen bg-dark-900 text-white font-sans selection:bg-brand-500 selection:text-white flex flex-col">
       <Navbar
         walletAddress={walletAddress}
         walletBalance={walletBalance}
@@ -103,12 +104,16 @@ const App: React.FC = () => {
         onDisconnect={handleDisconnectWallet}
       />
       
-      <Routes>
-        <Route path="/" element={<Mint />} />
-        <Route path="/metrics" element={<Metrics />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/whitepaper" element={<Whitepaper />} />
-      </Routes>
+      <div className="flex-1">
+        <Routes>
+          <Route path="/" element={<Mint />} />
+          <Route path="/metrics" element={<Metrics />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/whitepaper" element={<Whitepaper />} />
+        </Routes>
+      </div>
+
+      <Footer />
     </div>
   );
 };
